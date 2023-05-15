@@ -4,7 +4,7 @@
 
 To install the SDK, run the following command in your terminal:
 ```bash
-npm install lotr-sdk
+npm install @bigblue-rm/lotr-sdk
 ```
 
 ## Usage
@@ -12,7 +12,7 @@ npm install lotr-sdk
 Here's an example of how to use the SDK:
 
 ```javascript
-const LotrSDK = require('lotr-sdk');
+const LotrSDK = require('@bigblue-rm/lotr-sdk');
 
 const sdk = new LotrSDK('https://lotrapi.com');
 

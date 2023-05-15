@@ -1,6 +1,6 @@
 {
   "name": "@bigblue-rm/lotr-sdk",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "SDK for the Lord of the Rings API",
   "main": "index.js",
   "scripts": {
