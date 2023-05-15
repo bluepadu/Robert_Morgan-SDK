@@ -1,14 +1,14 @@
 {
-  "name": "lotr-sdk",
+  "name": "@bigblue-rm/lotr-sdk",
   "version": "1.0.0",
-  "description": "",
+  "description": "SDK for the Lord of the Rings API",
   "main": "index.js",
   "scripts": {
     "test": "jest"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Robert Morgan",
+  "license": "MIT",
   "devDependencies": {
     "jest": "^29.5.0"
   },
