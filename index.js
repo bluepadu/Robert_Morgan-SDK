@@ -6,28 +6,40 @@ class LotrSDK {
     }
 
     async getMovie(id) {
-        if (id) {
-            const response = await axios.get(`${this.apiBaseURL}/movie/${id}`);
-            return response.data;
-        } else {
-            const response = await axios.get(`${this.apiBaseURL}/movie`);
-            return response.data;
+        try {
+            if (id) {
+                const response = await axios.get(`${this.apiBaseURL}/movie/${id}`);
+                return response.data;
+            } else {
+                const response = await axios.get(`${this.apiBaseURL}/movie`);
+                return response.data;
+            }
+        } catch (error) {
+            throw new Error(`Failed to get movie: ${error.message}`);
         }
     }
 
     async getQuote(id) {
-        if (id) {
-            const response = await axios.get(`${this.apiBaseURL}/quote/${id}`);
-            return response.data;
-        } else {
-            const response = await axios.get(`${this.apiBaseURL}/quote`);
-            return response.data;
+        try {
+            if (id) {
+                const response = await axios.get(`${this.apiBaseURL}/quote/${id}`);
+                return response.data;
+            } else {
+                const response = await axios.get(`${this.apiBaseURL}/quote`);
+                return response.data;
+            }
+        } catch (error) {
+            throw new Error(`Failed to get quote: ${error.message}`);
         }
     }
 
     async getMovieQuotes(movieId) {
-        const response = await axios.get(`${this.apiBaseURL}/movie/${movieId}/quote`);
-        return response.data;
+        try {
+            const response = await axios.get(`${this.apiBaseURL}/movie/${movieId}/quote`);
+            return response.data;
+        } catch (error) {
+            throw new Error(`Failed to get quote for a movie: ${error.message}`);
+        }
     }
 }
 module.exports = LotrSDK;
